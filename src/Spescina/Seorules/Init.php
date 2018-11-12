@@ -8,8 +8,7 @@ class Init
 {
     public function handle($request, Closure $next)
     {
-        Facades\Seo::init();
-
+        // Facades\Seo::init();
         return $next($request);
     }
 }
