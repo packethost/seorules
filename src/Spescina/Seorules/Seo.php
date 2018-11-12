@@ -20,7 +20,7 @@ class Seo {
         return self::$instance;
     }
 
-    public function init() {
+    public function __construct() {
         $this->definedRule = new Rule(config('seorules.rule'));
         
         $this->loadRules();

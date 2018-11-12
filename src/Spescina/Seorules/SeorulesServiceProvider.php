@@ -37,8 +37,8 @@ class SeorulesServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        $this->app['seo'] = $this->app->share(function($app) {
-            return Seo::getInstance();
+        $this->app->singleton('seo', function($app) {
+            return new Seo();
         });
     }
 
